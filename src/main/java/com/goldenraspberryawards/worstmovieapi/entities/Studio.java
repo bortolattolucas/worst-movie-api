@@ -1,10 +1,12 @@
 package com.goldenraspberryawards.worstmovieapi.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
 public class Studio extends DefaultEntity {
 
+    @Column(unique = true)
     private String name;
 
     public Studio() {
