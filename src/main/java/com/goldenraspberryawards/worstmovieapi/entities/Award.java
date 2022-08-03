@@ -7,7 +7,7 @@ import java.util.Set;
 @Entity
 public class Award extends DefaultEntity {
 
-    private Long year;
+    private Long nominationYear;
     private String title;
     private boolean winner;
 
@@ -26,18 +26,18 @@ public class Award extends DefaultEntity {
     public Award() {
     }
 
-    public Award(Long year, String title, boolean winner) {
-        this.year = year;
+    public Award(Long nominationYear, String title, boolean winner) {
+        this.nominationYear = nominationYear;
         this.title = title;
         this.winner = winner;
     }
 
-    public Long getYear() {
-        return year;
+    public Long getNominationYear() {
+        return nominationYear;
     }
 
-    public void setYear(Long year) {
-        this.year = year;
+    public void setNominationYear(Long year) {
+        this.nominationYear = year;
     }
 
     public String getTitle() {
