@@ -1,5 +1,7 @@
 package com.goldenraspberryawards.worstmovieapi.dto;
 
+import java.util.Objects;
+
 public class ProducerIntervalDto {
 
     private String producer;
@@ -47,5 +49,14 @@ public class ProducerIntervalDto {
 
     public void setFollowingWin(String followingWin) {
         this.followingWin = followingWin;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ProducerIntervalDto)) return false;
+        ProducerIntervalDto that = (ProducerIntervalDto) o;
+        return Objects.equals(getProducer(), that.getProducer()) && Objects.equals(getInterval(), that.getInterval())
+                && Objects.equals(getPreviousWin(), that.getPreviousWin()) && Objects.equals(getFollowingWin(), that.getFollowingWin());
     }
 }
