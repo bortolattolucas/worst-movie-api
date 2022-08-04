@@ -19,8 +19,8 @@ public class ProducerResource {
         this.producerService = producerService;
     }
 
-    @GetMapping(value = "/intervals")
-    public ResponseEntity<ProducerResponseIntervalDto> findMaxIntervals() {
+    @GetMapping(value = "/max-min-intervals")
+    public ResponseEntity<ProducerResponseIntervalDto> findProducersWithMaximumAndMinimumWinningIntervals() {
         return ResponseEntity.ok(new ProducerResponseIntervalDto(
                 producerService.findIntervals(false),
                 producerService.findIntervals(true)
